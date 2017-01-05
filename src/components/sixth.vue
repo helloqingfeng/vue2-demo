@@ -6,11 +6,11 @@
 				<ul v-for="movie in movies">
 					<div class="col-sm-6 col-md-4">
 						<div class="thumbnail img-top">
-							<img v-bind:src="movie.images['large']">
+							<img v-bind:src="movie.images['large']" height="450">
 							<div class="caption text-center">
-								<h2 class="text-success">{{movie.title}}</h2>
+								<h4 class="text-success">{{movie.title}}</h4>
 								<p>豆瓣评分：{{movie.rating['average']}}</p>
-								<p class="lead text-danger">{{movie.genres.join("，")}}</p>
+								<h4 class="text-danger">{{movie.genres.join("，")}}</h4>
 								<p><a v-bind:href="movie.alt" class="btn btn-primary" role="button" target="_blank">查看详情</a></p>
 							</div>
 						</div>
@@ -51,8 +51,9 @@
 		margin-top: 20px;
 	}
 	.img-top img{
+		display: block;
 		margin-top: 20px;
-		height: 405px;
+		height: 450px;
 		overflow: hidden;
 	}
 </style>
