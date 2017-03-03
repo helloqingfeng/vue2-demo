@@ -33,7 +33,8 @@
 		mounted: function () {
 			$(window).scroll(function(){
 				var sc=$(window).scrollTop();
-				console.log(sc);
+				// console.log(sc);
+				// 回到顶部功能
 				if(sc>300){
 					$("#goTopBtn").css("display","block")
 					.css("position","fixed")
@@ -49,7 +50,7 @@
 				var that=this;
 				that.$http({
 					methods:'GET',
-					url:"http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1"
+					url:"https://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1"
 				}).then(
 				function(response){
 					this.products=response.data.results;
