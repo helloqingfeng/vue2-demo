@@ -38,6 +38,14 @@ module.exports = {
         path:'/swiper',
         component:require('./components/swiper.vue'),
         name:'轮播风景'
+    },{
+        path:'/topic/:id',
+        component:require('./components/Content.vue'),
+        name:'详情页'
+    },{
+        path:'/about',
+        component:require('./components/Hello.vue'),
+        name:'关于我'
     }
 ]
 }

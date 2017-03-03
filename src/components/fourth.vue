@@ -34,5 +34,11 @@
 		font-size: 10em;
 		color:#eee;
 	}
+	@media screen and (max-width: 720px) {
+		#fourth h1{
+			font-weight: 300;
+			font-size: 5em;
+		}
+	}
 </style>
 

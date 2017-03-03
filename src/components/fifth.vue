@@ -1,11 +1,15 @@
 <template>
 	<div id="m-fifth">
 		<ul class="list-group" v-for="(topic, index) in topicList">
-				<li class="list-group-item" v-if="index>=(current-1)*pagesize&&index<current*pagesize">
+			<li class="list-group-item" v-if="index>=(current-1)*pagesize&&index<current*pagesize">
 				<span class="avatar"><img v-bind:src="topic.author['avatar_url']" width="36"></span>
-					<a v-bind:href="'https://cnodejs.org/topic/'+topic.id" target="_blank">{{topic.title}}</a>
-					<span class="badge visitNum">{{topic.visit_count}} 次浏览</span>
-				</li>
+				<span class="m-text">
+					<router-link :to="{name:'详情页',params:{id:topic.id}}">
+						{{topic.title}}
+					</router-link>
+				</span>
+				<!-- <span class="badge visitNum">{{topic.visit_count}} 次浏览</span> -->
+			</li>
 		</ul>
 		<div class="container text-center">
 			<vue-pages :url="url1" :total="total" :counts="counts" :current="current" :fn="fn1"></vue-pages>
@@ -21,10 +25,10 @@
 				topicList:[],
 				url1: '#',
 				pageName:'p',
-				total: 6,
+				total: 5,
 				counts: 8,
 				current: 1,
-				pagesize:7,
+				pagesize:9,
 				getTopicUrl:'https://cnodejs.org/api/v1/topics'
 			}
 		},
@@ -67,6 +71,20 @@
 	}
 	.avatar{
 		padding-right: 15px;
+	}
+
+	@media screen and (max-width: 640px){
+		#m-fifth a{
+			font-size: 14px;
+			width: 10em;
+			text-decoration: none;
+		}
+		.m-text{
+			display: inline-block;
+			white-space:nowrap;
+			width: 30em;
+			text-overflow:ellipsis;
+		}
 	}
 
 </style>
