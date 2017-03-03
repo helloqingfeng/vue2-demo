@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid">
+	<div class="container">
 	<hr class="hr-border">
 		<footer>
 			<div class="span-inline">
@@ -22,11 +22,13 @@
 				</span>
 
 			</div>
+			<div class="container">
 			<p class="copyright">
 				Copyright © 前端技术 2016
 				<br>
 				Owned by <a href="https://github.com/helloqingfeng">hello清风</a>
 			</p>
+			</div>
 		</footer>
 	</div>
 </template>
@@ -43,7 +45,8 @@
 	}
 	.span-inline span{
 		display: inline-block;
-		width: 100px;
+		width: 10%;
+		max-width: 120px;
 		margin: 5px 10px;
 	}
 	.span-inline span:hover{
@@ -56,5 +59,11 @@
 	.copyright{
 		text-align: center;
 		font-size: 18px;
+	}
+	@media screen and (max-width: 500px) {
+		.span-inline img{
+			max-width: 32px;
+			width: 40%;
+		}
 	}
 </style>

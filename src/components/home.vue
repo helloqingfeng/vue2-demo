@@ -1,12 +1,11 @@
 <template>
-	<div id="home">
-		<div class="container">
-			<div class="jumbotron" id="m-home">
+	<div id="home" >
+			<div class="jumbotron">
 				<h1>Hello, World!</h1>
 				<p>这是一个使用 Vue 2.0 构建的简单单页应用，主要的依赖库有vue-cli、vue-router、vue-resource、bootstrap。</p>
 				<h2><a href="https://github.com/helloqingfeng" title="我的GitHub首页">Learn more</a></h2>
 			</div>
-		</div>
+
 		<div class="bloc l-bloc container" id="bloc-6">
 			<div class="row">
 				<div class="col-sm-6">

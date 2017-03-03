@@ -6,7 +6,9 @@
 				<ul v-for="movie in movies">
 					<div class="col-sm-6 col-md-4">
 						<div class="thumbnail img-top">
-							<img v-bind:src="movie.images['large']" height="450">
+						<div class="imgcenter">
+							<img v-bind:src="movie.images['large']" class="img-responsive">
+						</div>
 							<div class="caption text-center">
 								<h4 class="text-success">{{movie.title}}</h4>
 								<p>豆瓣评分：{{movie.rating['average']}}</p>
@@ -52,8 +54,7 @@
 	}
 	.img-top img{
 		display: block;
-		margin-top: 20px;
-		height: 450px;
-		overflow: hidden;
+		margin: 10px auto;
+		height: 400px;
 	}
 </style>
